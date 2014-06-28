@@ -6,6 +6,7 @@
         "express" : "4.x",
         "jade" : "*",
         "mongoose" : "*",
-        "mongodb" : "*"
+        "mongodb" : "*",
+        "body-parser" : "*"
     }
 }
