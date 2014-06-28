@@ -1,8 +1,7 @@
+extends layout
+
 block content
 
-
-hi hello
-ul
-    li my brothers and sisters
-    li all of you out there
-    li anyone else
+    form(name="actionAdd", action="/actions", method="post")
+        input(type="text", name="actionName", align="left", placeholder="what do you like doing?")
+        //- input(type="submit", name="addActionSubmit", placeholder="what do you like doing?", class="btn btn-default")

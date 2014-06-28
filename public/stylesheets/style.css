@@ -1,0 +1,15 @@
+h1 {
+    font-size: 300px;
+}
+
+input[type="text"] {
+    width: 95%;
+    height: 75px;
+    font-size: 100%;
+    margin: 0 auto;
+}
+
+form {
+    text-align: center;
+}
+
