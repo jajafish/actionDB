@@ -32,27 +32,10 @@ app.set('view options', {layout: true});
 require("./models/Action")(mongooseConnection);
 
 
-
-app.get("/actions/new", function(req, res){
-    res.render("index", {title: "hey all"});
-});
+require("./controllers/ActionController")(app, mongooseConnection);
 
 
-app.post("/actions/create", function(req, res){
-    var Action = mongoose.model("Action");
-    var actionName = req.body.actionName;
-    var newAction = new Action();
-    newAction.actionName = actionName;
-    newAction.save(function(err, data){
-        if (err){
-            res.render("error", {err: err});
-        }
-        else {
-            var id = data.id;
-            console.log("hello");
-        }
-    })
 
-});
+
 
 
