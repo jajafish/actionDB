@@ -6,7 +6,22 @@ html
     link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
   body
 
-    
-    h1 ActionDB
+
+
+
+
+
+
+    .row
+        .col-sm-2
+            .profile
+                img(src="/img/jen.jpg", id="user-profile-pic")
+        .col-sm-9
+            form(name="actionAdd", action="/actions/create", method="post")
+                input(type="text", name="actionName", align="left", placeholder="what do you want to do?")
+    .row
+        <hr>
+
+
     block content
 

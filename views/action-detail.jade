@@ -2,11 +2,56 @@ extends layout
 
 block content
 
-    h1 Action #{actionInfo.actionName}
+    .container
 
-    h3 Conditions
-        ul
-            li It is very
-            li Best to do on
-            li Only when
-            
+        .jumbotron
+
+            h1 #{actionInfo.actionName}
+
+
+
+        .row
+
+            .col-sm-12.col-md-6
+                .panel.panel-default
+                    .panel-body
+                        h3 People who want to do this
+
+
+            .col-sm-12.col-md-6
+                .panel.panel-default
+                    .panel-body
+                        h3 Best places to do this
+
+        .row
+
+            .col-sm-12.col-md-6
+                .panel.panel-default
+                    .panel-body
+                        h3 Conditions
+                            ul
+                                li It is very
+                                li Best to do on
+                                li Only when
+
+            .col-sm-12.col-md-6
+                .panel.panel-default
+                    .panel-body
+                        h3 Next times you can do this
+
+        .row
+            .col-sm-12.col-md-6
+                .panel.panel-default
+                    .panel-body
+                        h3 People think of this
+                            ul
+                                li "It sucks" --- John
+                                li "It rules" --- Jay
+                                li "I'm not sure" --- Mary
+
+
+
+
+        #footer
+
+            input(type="submit", value="Lets DO It")
