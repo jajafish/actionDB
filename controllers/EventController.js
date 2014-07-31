@@ -10,19 +10,46 @@ module.exports = function(app, mongoose){
             maxRedirects: 10,
         }, function(error, response, body){
             var parsedData = JSON.parse(body);
+            // console.log(parsedData);
+
             var events = parsedData.events;
+            // console.log(events);
+
+            var oneEvent = events[3];
+            // console.log(oneEvent);
+            var actualEventTitle = oneEvent["event"].title;
+            console.log(actualEventTitle);
 
 
-            for (i = 0; i < events.length; i++){
-                event = events[5].event;
+            // console.log(oneEventTitle);
+
+
+
+
+            // var events = parsedData.events;
+
+            //     for (var event in events){
+
+            //     var eventName = event[title];
+            //     var newEvent = new Action();
+            //     newAction.eventName = eventName;
+            //     newAction.save(function(err, data){
+            //         if (err){
+            //             res.render("error", {err: err});
+            //         }
+            //         else {
+            //             var id = data.id;
+            //             console.log(newEvent);
+            //             res.render("events", {
+            //                 title: "all events",
+            //                 event: event
+            //             });
+            //         }
+            //     });
+
             }
 
-            res.render("events", {
-                title: "all events",
-                event: event
-
-            });
-        });
+        );
 
 
     });

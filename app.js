@@ -29,9 +29,15 @@ app.set('view engine', 'jade');
 app.set('view options', {layout: true});
 
 
+// ACTIONS
 require("./models/Action")(mongooseConnection);
-
 require("./controllers/ActionController")(app, mongooseConnection);
 
-require("./controllers/EventController")(app, mongooseConnection, require);
+
+// EVENTS
+require("./models/Event")(mongooseConnection);
+require("./controllers/EventController")(app, mongooseConnection, request);
+
+
+
 
