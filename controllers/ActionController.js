@@ -6,6 +6,10 @@ module.exports = function(app, mongoose){
         res.render("index", {title: "hey all"});
     });
 
+    app.get("/actions/all", function(req, res){
+        res.render("actions-all", {title: "people want to..."});
+    });
+
     app.post("/actions/create", function(req, res){
         var actionName = req.body.actionName;
         var newAction = new Action();
@@ -34,7 +38,6 @@ module.exports = function(app, mongoose){
             }
         })
     });
-
 
 }
 
