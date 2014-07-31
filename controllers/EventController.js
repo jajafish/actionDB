@@ -12,14 +12,19 @@ module.exports = function(app, mongoose){
             var parsedData = JSON.parse(body);
             var events = parsedData.events;
 
-            console.log(events[1]);
+
+            for (var event in events){
+                var eventName = event["title"];
+            }
+
+            console.log(events[5]["event"]["title"]);
+
 
             res.render("events", {
                 title: "all events",
-                events: body
+                events: events
             });
         });
-
 
 
     });
