@@ -9,14 +9,20 @@ module.exports = function(app, mongoose){
             followRedirect: true,
             maxRedirects: 10,
         }, function(error, response, body){
+
+            // PARSE THE RESPONSE AS JSON
             var parsedData = JSON.parse(body);
             // console.log(parsedData);
 
+            // PARSE THE JSON RESPONSE FOR EVENTS OBJECTS
             var events = parsedData.events;
             // console.log(events);
 
+            // GRAB ONE EXAMPLE EVENT OBJECT
             var oneEvent = events[3];
             // console.log(oneEvent);
+
+            // GRAB SPECIFIC DATA FROM THE EVENT
             var actualEventTitle = oneEvent["event"].title;
             console.log(actualEventTitle);
 
