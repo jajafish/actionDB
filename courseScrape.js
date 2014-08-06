@@ -7,13 +7,14 @@ request('https://www.ccsf.edu/Schedule/Fall/computer_science.shtml', function(er
         var $ = cheerio.load(body);
         $('.courseTitle', 'body').each(function(){
             var courseTitle = $(this).text();
-            var descAnchor = $(this).children("a").attr('href');
+            var descAnchor = $(this).children("a").attr('href').toString();
+            var descUrl0 = descAnchor.replace("javascript:cC(", '');
+            var descUrl1 = descUrl0.replace(",\'CCS\')", '');
             var courseObject = {
                 title: courseTitle,
-                url: descAnchor,
+                url: descUrl1,
             }
             courses.push(courseObject);
-            // console.log(descAnchor);
         });
         console.log(courses);
     }
