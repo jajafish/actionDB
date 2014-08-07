@@ -1,14 +1,15 @@
 {
-    "name" : "actionDB",
-    "version" : "0.0.1",
-    "private" : true,
-    "dependencies" : {
-        "express" : "4.x",
-        "jade" : "*",
-        "mongoose" : "*",
-        "mongodb" : "*",
-        "config" : "*",
-        "body-parser" : "*",
-        "eventbrite" : "*"
-    }
+  "name": "actionDB",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "*",
+    "config": "*",
+    "eventbrite": "*",
+    "express": "4.x",
+    "jade": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "rsvp": "^3.0.9"
+  }
 }
